@@ -1,2 +1,127 @@
 Iframe Method to upload the map:
 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6596.551509720004!2d-118.52907493886961!3d34.24150659431843!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c29a540fb2668f%3A0xf01092f387d92a56!2sCalifornia%20State%20University%2C%20Northridge!5e0!3m2!1sen!2sus!4v1668321133557!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+API Key: AIzaSyA4oU81TZq3-aRNjKRCoD9tG6iNluYEKzc
+
+Coordinates:
+34.2394448,-118.529148
+
+Quiz Logic:
+1. Load the map with the clickable rectangle
+2. Let User only double click the map
+3. Check if the double click is within the bounds of rectangle.
+4. Give website response.
+5. Let user hit the next button to move to the next question.
+6. Load next question and rectangle.
+7. Continue this until quiz is finished.
+
+Objective:
+get cordniate from click and check if its in the bounds of rectangle.
+
+Scratch Code:
+
+
+        // google.maps.event.addListener(map, "dblclick", function(event) {
+        //     //Gets coords
+        //     var clickLat = event.latLng;
+        //     //Displays coords
+        //     document.getElementById("latlng").innerHTML = clickLat;
+        //     clickCoord = clickLat;
+
+        //     //Checking if its in the bounds of rectangle
+        //     inputCheck(rec);
+
+        //     //resultColor = google.maps.Rectangle.containsLocation(clickLat, rec) ? withinBounds(rec) : outOfBounds(rec);
+        //     //var isWithinRectangle = rec.getBounds().contains(clickCoord);
+        // });
+
+    //Jacaranda
+    //addRec({north: 34.242128, south: 34.241002, east: -118.527791, west: -118.529473}, 0);
+
+    // function aRec(cordss, transparent){
+    //     var rec = new google.maps.Rectangle({
+    //         map: map,
+    //         bounds: cordss,
+    //         strokeOpacity: transparent,
+    //         fillOpacity: transparent,
+    //         clickable: true
+    //     })
+    // }
+    //var isWithinRectangle = rectangle.getBounds().contains(point);
+
+
+
+
+
+
+// function checkAnswer(clickLocation, bounds){
+//     var cordClick = new google.maps.LatLng
+//     var isWithinRectangle = rectangle.getBounds().contains(clicklocation);
+// }
+
+//function will set the new data and check if the response is valid.
+// function inputCheck(shape){
+//     if(clickLat != null){ //coords is not null
+//         isWithinBounds = shape.getBounds().contains(clickLat) ? withinBounds(shape) : outOfBounds(shape);
+//     } else{ //Giving error for invald input
+//         document.getElementById("error").innerHTML = "Invalid input. (Click value null)";
+//     }
+//     //resetting click value
+//     clickCoord = null;
+// }
+
+
+//Rectangles
+    // //Jerome Richfield
+    // addRec({north: 34.239110, south: 34.238609, east: -118.530195, west: -118.531579}, 0);
+    // //Live Oak
+    // addRec({north: 34.238392, south: 34.238175, east: -118.527601, west: -118.528811}, 0);
+    // //Sierra Hall
+    // addRec({north: 34.238474, south: 34.238093, east: -118.530001, west: -118.531433}, 0);
+    // //Book Store
+    // addRec({north: 34.237746, south: 34.236968, east: -118.527624, west: -118.528815}, 0);
+
+//Switch case that goes in the init map function for how the quesiton were going to be implemented.
+ // switch(questionNum){
+    //     case 0:
+            
+    //         break;
+    //     case 1:
+    //         break;
+    //     case 2:
+    //         break;
+    //     case 3:
+    //         break;
+    //     case 4:
+    //         break;
+    //     default:
+    //         break;
+        
+    // }
+
+
+
+
+
+
+
+
+
+css stuff:
+#next{
+    border-radius: 10px;
+    background: linear-gradient(100deg, red, blue);
+    color: aliceblue;
+    font-weight: bold;
+    font-size: large;
+    width: 300px;
+    margin: auto;
+    transition: 0.05s;
+}
+#next:hover{
+    background: linear-gradient(100deg, rgb(255, 87, 87), rgb(87, 87, 255));
+}
+#next:active{
+    background: rgb(85, 85, 85);
+
+}

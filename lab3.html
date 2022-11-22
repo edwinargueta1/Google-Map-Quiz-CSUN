@@ -4,16 +4,27 @@
         <!--Linking files into html document.-->
         <link rel = "stylesheet" type="text/css" href="lab3.css">
         <script src="lab3.js"></script>
-        <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
+        <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyA4oU81TZq3-aRNjKRCoD9tG6iNluYEKzc&callback=initMap"></script>
 
 
     </head>
     <body>
         <div class="bodyContainer">
             <h1>Google Map of CSUN</h1>
-            <h2>bdf</h2>
-            <iframe width="425" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com.br/maps?f=q&amp;source=s_q&amp;hl=pt-BR&amp;geocode=&amp;q=brazil&amp;aq=&amp;sll=-21.086832,-42.409844&amp;sspn=0.895645,1.674042&amp;ie=UTF8&amp;hq=&amp;hnear=Rep%C3%BAblica+Federativa+do+Brasil&amp;t=m&amp;z=4&amp;ll=-14.235004,-51.92528&amp;output=embed"></iframe>
+            <div class="question">
+                <h2 id="question">Question</h2>
+            </div>
+            <!--Map-->
+            <div id="map"></div>
+            <div id="overlay" onclick="offOverlay()"><p id="score"></p></div>
+            <p id="status"></p>
+            <p id="error"></p>
+            <section>
+                <div class="submitContainer">
+                    <input type="button" id="next" onclick="setQuestion()" value="Next">
+                </div>
+            </section>
+        </div>
 
-            <!--<div id="map" style="width:90%; height: 600px;"></div>-->
     </body>
 </html>
