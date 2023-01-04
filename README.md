@@ -1,5 +1,4 @@
 # Google-Map-Quiz-CSUN
-Documents for lab 3 web development class.
- This will be a single web page that can be rendered in
-the browser directly (by just simply opening the file in a browser) or by placing the contents of the file in your
-apache2 web servers documentroot folder and loading the page on localhost.
+A single web page that can be rendered in
+the browser directly and running simple quiz using the google maps api. Quiz will based on locations of certain landmarks
+around the CSUN Campus.
