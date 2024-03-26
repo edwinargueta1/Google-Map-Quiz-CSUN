@@ -21,12 +21,13 @@ const liveOak = {north: 34.238392, south: 34.238175, east: -118.527601, west: -1
 function initMap(){
     //Map Config
     var options = {
-        zoom: 16.6,
+        zoom: 15.9,
         center:{lat: 34.2394448, lng: -118.529148},
         zoomControl: false,
         gestureHandling: "none",
-        disableDefaultUI: true
-    }
+        disableDefaultUI: true,
+        mapTypeId: 'satellite'
+    };
     //Map Object
     map =  new google.maps.Map(document.getElementById("map"), options);
 
@@ -90,10 +91,11 @@ function removeRectangle() {
  //Overlay for displaying score
  function overlay(){
     document.getElementById("overlay").style.display = "block";
-    document.getElementById("score").innerHTML = "Why are you gay?"; //"You scored "+ score + " out of a possible 5 correct!";
+    document.getElementById("score").innerHTML = "You scored "+ score + " out of a possible 5 correct!";
  }
  function offOverlay(){
     document.getElementById("overlay").style.display = "none";
+    location.reload();
  }
 
 //Quiz Functions
@@ -139,7 +141,6 @@ function setQuestion(){
             case 5:
                 //Finished with the Quiz and add overlay.
                 document.getElementById("next").onclick = overlay();
-                overlay();
                 break;
             default:
                 //Error
